@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Nunito+Sans:opsz@6..12&display=swap");
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.no-display {
+  display: none;
+}
+
+.container {
+  background-color: #191919;
+}
+
+/** header **/
+
+header {
+  background-color: #191919;
+}
+
+nav {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.items-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.items-list a {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 500;
+}
+
+/**main-home**/
+
+.home {
+  background-image: url(../img/header-photo.jpg);
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner {
+  margin-top: 40%;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.banner p {
+  font-size: 2rem;
+  color: #ede4d1;
+}
+
+.divisor {
+  border: 2px solid #ede4d1;
+  border-radius: 20px;
+  margin: 0.5rem 0;
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+.low-btn {
+  margin-bottom: 1rem;
+}
+
+/**content**/
+
+.content-and-footer {
+  background-image: url(../img/header-2.jpg);
+}
+
+.content-container {
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.jobs {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  background-image: url(../img/header-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ede4d1;
+  gap: 1rem;
+}
+
+.content-info__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.content-info__text {
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+/**footer**/
+.contact-networks__link img {
+  width: 50px;
+}
