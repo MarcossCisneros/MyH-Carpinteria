@@ -135,6 +135,11 @@ main {
   border-radius: 0.5rem;
 }
 
+.jobs:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+
 .title-jobs {
   backdrop-filter: blur(2px);
   width: 100%;
@@ -143,6 +148,7 @@ main {
   color: #ede4d1;
   font-size: 3rem;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .content-info {
@@ -274,6 +280,11 @@ footer {
 
 .contact-networks__link img {
   max-width: 3rem;
+}
+
+.contact-networks__link:hover {
+  animation: pulse;
+  animation-duration: 0.5s;
 }
 
 .item-footer {
