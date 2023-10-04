@@ -12,7 +12,7 @@
   </head>
   <body>
     <header>
-      <nav class="nav">
+      <div class="nav-container">
         <div class="logo">
           <a href="index.html">
             <img src="img/logo.png" alt="logo" />
@@ -22,20 +22,22 @@
           <img src="img/menu.png" alt="menu-open" />
         </div>
         <div class="items">
-          <div class="menu-close no-display">
+          <div class="menu-close">
             <img src="img/menu-close.png" alt="menu-close" />
             <hr class="divisor" />
           </div>
           <ul class="items-list">
-            <li class="items-links"><a href="#">Inicio</a></li>
-            <li class="items-links"><a href="#">Sobre Nosotros</a></li>
-            <li class="items-links"><a href="#">Nuestros trabajos</a></li>
+            <li class="items-links"><a href="index.html">Inicio</a></li>
+            <li class="items-links"><a href="#jobs">Sobre Nosotros</a></li>
+            <li class="items-links">
+              <a href="pages/trabajos.html">Nuestros trabajos</a>
+            </li>
             <li class="contact-btn">
               <a href="#footer">Contacto</a>
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
     </header>
     <div class="container">
       <div class="main-container">
@@ -45,7 +47,7 @@
               <div class="banner">
                 <p class="title">Marzoli e Hijos</p>
                 <hr class="divisor" />
-                <p class="subtitle">Carpintería</p>
+                <p class="subtitle">Carpintería y Laqueado</p>
               </div>
 
               <div class="low-btn">
@@ -55,7 +57,7 @@
               </div>
             </div>
           </div>
-          <div class="jobs-container">
+          <div class="jobs-container" id="jobs">
             <div class="jobs">
               <p class="title-jobs">Nuestros Trabajos</p>
             </div>
@@ -67,6 +69,7 @@
             <div class="content">
               <div class="content-info">
                 <p class="content-info__title">¿Quiénes Somos?</p>
+                <hr class="divisor-title-contact" />
                 <p class="content-info__text">
                   cuales contenian pasajes de Lorem Ipsum, y más recientemente
                   con PageMaker, el cual incluye versiones de Lorem Ipsum.

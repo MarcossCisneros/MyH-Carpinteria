@@ -13,10 +13,6 @@ html {
   transition: all 1s;
 }
 
-.no-display {
-  display: none;
-}
-
 .container {
   background-color: #000;
   display: flex;
@@ -27,10 +23,10 @@ html {
 /** header **/
 
 header {
-  background-color: #191919;
+  background-color: #1c1c1c;
 }
 
-nav {
+.nav-container {
   display: flex;
   color: #fff;
   justify-content: space-between;
@@ -41,6 +37,8 @@ nav {
 .items-list {
   display: flex;
   list-style: none;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -53,8 +51,8 @@ nav {
 }
 
 .items-links:hover {
-  animation: pulse; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 0.5s; /* don't forget to set a duration! */
+  animation: pulse;
+  animation-duration: 0.3s;
 }
 
 /**main-home**/
@@ -131,7 +129,6 @@ main {
   font-size: 2rem;
   text-align: center;
   background-image: url(../img/fondo-banner.svg);
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -155,13 +152,12 @@ main {
   align-items: center;
   color: #ede4d1;
   gap: 1rem;
-  padding: 200px 0;
+  padding: 20% 0;
 }
 
 .content-info__title {
   font-size: 2.5rem;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .content-info__text {
@@ -185,6 +181,13 @@ footer {
   justify-content: center;
 }
 
+.divisor-title-contact {
+  width: 35%;
+  border: 2px solid #ede4d1;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 .contact-btn {
   background-color: #d4a13b;
   padding: 0.3rem;
@@ -194,6 +197,7 @@ footer {
 .contact-btn a {
   text-decoration: none;
   color: #191919;
+  font-weight: 600;
 }
 
 .contact-btn:hover {
@@ -288,19 +292,67 @@ footer {
   width: 80%;
 }
 
+/**menu responsive**/
+.menu-open {
+  display: none;
+}
+
+.menu-close,
+.menu-open:hover {
+  cursor: pointer;
+}
+
+.menu-close {
+  display: none;
+}
+
 /**responsive**/
 
 .menu-open {
   display: none;
 }
 
+.no-display {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
 @media screen and (max-width: 810px) {
   .items {
-    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
+  }
+
+  .visible {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    animation: slideInRight;
+    animation-duration: 0.5s;
+  }
+
+  .menu-close {
+    display: block;
+  }
+
+  .not-visible {
     display: none;
   }
 
@@ -308,8 +360,8 @@ footer {
     padding: 1rem;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
-    background-color: #000;
     height: 100%;
   }
 
@@ -317,6 +369,11 @@ footer {
     width: 100%;
     margin: 1rem 0;
   }
+
+  .divisor-title-contact {
+    width: 80%;
+  }
+
   .menu-open {
     padding-top: 1rem;
     display: block;
@@ -328,17 +385,12 @@ footer {
 
   .menu-close {
     padding: 1rem;
-    background-color: #000;
     text-align: center;
+    width: 100%;
   }
 
   .menu-close img {
     width: 2.5rem;
-  }
-
-  .nav {
-    justify-content: space-between;
-    align-items: center;
   }
 
   .content-info {
@@ -348,7 +400,6 @@ footer {
   .content-info__title {
     font-size: 2.5rem;
     font-weight: bold;
-    text-decoration: underline;
   }
 
   .content-info__text {
@@ -392,4 +443,9 @@ footer {
   .banner p {
     font-size: 2rem;
   }
+}
+
+/**pagina de nuestros trabajos**/
+.cards-jobs {
+  height: 100vh;
 }
